@@ -5,13 +5,13 @@ library("ggimage")
 library("ggthemes")
 
 # ----- load data files 
-ger2016 <- read.csv("/data/2016/1-bundesliga.csv")
-ger2017 <- read.csv("/data/2017/1-bundesliga.csv")
-ger2018 <- read.csv("/data/2018/1-bundesliga.csv")
-ger2019 <- read.csv("/data/2019/1-bundesliga.csv")
+ger1 <- read.csv("/data/2016/1-bundesliga1.csv")
+ger2 <- read.csv("/data/2017/1-bundesliga2.csv")
+ger3 <- read.csv("/data/2018/1-bundesliga3.csv")
+ger4 <- read.csv("/data/2019/1-bundesliga4.csv")
 
 # ----- merge data files 
-ger <- rbind(ger2016, ger2017, ger2018, ger2019)
+ger <- rbind(ger1, ger2, ger3, ger4)
 
 # ----- clean data and remove youth team transfers 
 ger$Club <- as.character(ger$Club)
