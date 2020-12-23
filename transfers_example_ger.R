@@ -5,10 +5,10 @@ library("ggimage")
 library("ggthemes")
 
 # ----- load data files 
-ger16 <- read.csv("/data/2016/1-bundesliga2016.csv")
-ger17 <- read.csv("/data/2017/1-bundesliga2017.csv")
-ger18 <- read.csv("/data/2018/1-bundesliga2018.csv")
-ger19 <- read.csv("/data/2019/1-bundesliga2019.csv")
+ger16 <- read.csv("/1-bundesliga2016.csv")
+ger17 <- read.csv("/1-bundesliga2017.csv")
+ger18 <- read.csv("/1-bundesliga2018.csv")
+ger19 <- read.csv("/1-bundesliga2019.csv")
 
 # ----- merge data files 
 ger <- rbind(ger16, ger17, ger18, ger19)
