@@ -2,7 +2,6 @@
 library("tidyverse")
 library("stringr")
 library("ggimage")
-library("ggthemes")
 
 # ----- load data files 
 ger16 <- read.csv("/1-bundesliga2016.csv")
