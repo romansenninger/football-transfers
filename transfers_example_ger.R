@@ -22,7 +22,7 @@ ger$ClubInvolved[ger$ClubInvolved == "RasenBallsport Leipzig II"] <- "RB Leipzig
 
 ger$youthteam <- str_detect(ger$ClubInvolved, ger$Club, negate = F)
 
-# ----- remove end of loan
+# ----- remove end of loan transfers
 ger$Fee <- as.character(ger$Fee)
 ger$loan <- str_detect(ger$Fee, "End of", negate = F)
 
@@ -36,6 +36,7 @@ count <- count[with(count,order(-n)),]
 
 count <- count[1:5,]
 
+# ----- define logos
 count <- count %>% mutate(
   image = case_when(
     ClubInvolved == "Red Bull Salzburg" ~ "/logos/rbs.png",
@@ -50,9 +51,7 @@ count <- count %>% mutate(
     Club == "Bayer 04 Leverkusen" ~ "/logos/bayer.png",
     Club == "Bayern Munich" ~ "/logos/fcb.png",
     Club == "SC Freiburg" ~ "/logos/freiburg.png",
-    Club == "Fortuna Düsseldorf" ~ "/logos/fortuna.png",
-    
-    
+    Club == "Fortuna Düsseldorf" ~ "/logos/fortuna.png",    
   )
 )
 
